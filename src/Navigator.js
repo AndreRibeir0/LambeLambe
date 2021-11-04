@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { NavigationContainer } from '@react-navigation/native';
 
 import Feed from './screens/Feed'
+import AddPhoto from './screens/AddPhoto'
 
 const Tab = createBottomTabNavigator();
 
@@ -18,7 +19,7 @@ export default function MenuNavigator() {
                 <Icon name='home' size={30} color={color}/>
             ),
           }} />
-          <Tab.Screen name="AddPhoto" component={Feed} 
+          <Tab.Screen name="AddPhoto" component={AddPhoto} 
           options={{
             tabBarShowLabel: false,  
             tabBarIcon: ({ color }) => (
@@ -36,7 +37,3 @@ export default function MenuNavigator() {
       </NavigationContainer>
     );
 }
-
-// const MenuNavigator = createBottomTabNavigator('Feed')
-
-// export default MenuNavigator
