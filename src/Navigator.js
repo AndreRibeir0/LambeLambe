@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Feed from './screens/Feed'
 import AddPhoto from './screens/AddPhoto'
+import Profile from './screens/Profile'
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +27,7 @@ export default function MenuNavigator() {
                 <Icon name='camera' size={30} color={color}/>
             ),
           }}/>
-          <Tab.Screen name="Profile" component={Feed} 
+          <Tab.Screen name="Profile" component={Profile} 
           options={{
             tabBarShowLabel: false,  
             tabBarIcon: ({ color }) => (
