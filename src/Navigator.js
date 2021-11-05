@@ -1,11 +1,20 @@
 import React from 'react'
-import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { NavigationContainer } from '@react-navigation/native';
+import { createSwitchNavigator } from '@react-navigation/compat';
 
 import Feed from './screens/Feed'
 import AddPhoto from './screens/AddPhoto'
 import Profile from './screens/Profile'
+import Login from './screens/Login'
+
+const loginOrProfileRouter = createSwitchNavigator({
+    Perfil: Profile,
+    Auth: Login
+}, {
+  initialRouteName: 'Profile'
+})
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +36,7 @@ export default function MenuNavigator() {
                 <Icon name='camera' size={30} color={color}/>
             ),
           }}/>
-          <Tab.Screen name="Profile" component={Profile} 
+          <Tab.Screen name="Profile" component={loginOrProfileRouter} 
           options={{
             tabBarShowLabel: false,  
             tabBarIcon: ({ color }) => (
