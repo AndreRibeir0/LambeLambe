@@ -19,7 +19,6 @@ class Profile extends Component {
                 </TouchableOpacity>
             </View>
         )
-
     }
 }
 
