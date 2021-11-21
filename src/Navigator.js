@@ -26,7 +26,7 @@ const loginOrProfileRouter = createSwitchNavigator({
     Perfil: Profile,
     Auth: MyStack
 }, {
-  initialRouteName: 'Profile'
+  initialRouteName: 'Auth'
 })
 
 const Tab = createBottomTabNavigator();
